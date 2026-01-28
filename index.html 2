@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>China the Saint</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      background: #050505;
+      color: #e6e6e6;
+      font-family: "Times New Roman", serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      opacity: 0.6;
+      margin-bottom: 40px;
+      font-size: 1rem;
+    }
+
+    .spotify-link {
+      display: inline-block;
+      margin-bottom: 30px;
+      color: #e6e6e6;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 4px;
+    }
+
+    .spotify-link:hover {
+      opacity: 0.7;
+    }
+
+    /* Album box styles */
+    .album-box {
+      display: inline-block;
+      width: 300px;
+      max-width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+      cursor: pointer;
+      transition: transform .15s ease, opacity .15s ease;
+      margin-bottom: 24px;
+      text-decoration: none; /* remove underline for anchor */
+      color: inherit;
+    }
+
+    .album-wrapper {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .album-cover {
+      display: block;
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+
+    .album-play {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      color: rgba(255,255,255,0.95);
+      background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.35) 100%);
+      opacity: 0;
+      transition: opacity .12s ease, transform .12s ease;
+      pointer-events: none;
+    }
+
+    .album-box:hover {
+      transform: translateY(-4px);
+      opacity: 0.98;
+    }
+
+    .album-box:hover .album-play {
+      opacity: 1;
+      transform: scale(1.02);
+    }
+
+    .embed {
+      margin: 40px 0;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.8rem;
+      opacity: 0.4;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>CHINA THE SAINT</h1>
+   
+    <a 
+      class="spotify-link" 
+      href="https://open.spotify.com/artist/2VnjyS95cnn60DJt4sa5ZY"
+      target="_blank"
+      rel="noopener"
+    >
+      Listen on Spotify
+    </a>
+
+    <!-- Clickable album cover box: update the image URL below -->
+    <div>
+      <a
+        class="album-box"
+        href="https://open.spotify.com/track/2VnjyS95cnn60DJt4sa5ZY"
+        target="_blank"
+        rel="noopener"
+        aria-label="Open track on Spotify"
+      >
+        <span class="album-wrapper">
+          <img
+            class="album-cover"
+            src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ba/7c/4b/ba7c4bbe-c0d9-edab-d12d-c7a8de12ad48/artwork.jpg/316x316cc.webp"
+            alt="Album cover for China the Saint"
+          />
+          <span class="album-play" aria-hidden="true">▶</span>
+        </span>
+      </a>
+    </div>
+
+    <!-- Spotify Embed (Track or Album) -->
+    <div class="embed">
+      <iframe 
+        style="border-radius:12px" 
+        src="https://open.spotify.com/embed/track/2VnjyS95cnn60DJt4sa5ZY"
+        width="100%" 
+        height="152" 
+        frameBorder="0" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <footer>
+      © China the Saint
+    </footer>
+
+  </div>
+</body>
+</html>
